@@ -1,9 +1,9 @@
 {% extends "base.html" %}
 {% block content %}
 
-{% for book in all_books %}
+
     <div>
-    <a href="books/ {{book.id }}">{{ book.title }}</a>
+    {{ book.title }}
     <br>
     {{ book.author.name }}
         <div>
@@ -11,15 +11,11 @@
                 <input type="submit" value="Delete">
             </form>
         </div>
-        <div>
-            <a href="/books/{{ book.id }}/edit_book"> Edit Book </a>
-        
-        </div>
     </div>
 
     
 
-{% endfor %}
+
 
 
 {% endblock %}

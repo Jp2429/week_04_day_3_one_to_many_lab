@@ -10,6 +10,7 @@ def save(author):
     author.id = id
     return author
 
+
 def select_all():
     authors = []
     sql = "SELECT * FROM authors"
@@ -19,6 +20,7 @@ def select_all():
         author = Author(row['name'], row['id'])
         authors.append(author)
     return authors
+
 
 def select(id):
     author = None
@@ -33,6 +35,7 @@ def select(id):
 def delete_all():
     sql = "DELETE FROM authors"
     run_sql(sql)
+
 
 def delete(id):
     sql = "DELETE FROM authors WHERE id = %s"
